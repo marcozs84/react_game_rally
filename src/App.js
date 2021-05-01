@@ -1,33 +1,8 @@
 import React from "react";
 import './App.css';
-// import Cards from './components/Cards';
 import Card from './components/Card';
-// import React from 'react';
-import { ReactComponent as Track } from './track3.svg';
+import { ReactComponent as Track } from './track5.svg';
 import track from './track.svg';
-
-// import {
-// 	FaArchive,
-// 	FaBabyCarriage,
-// 	FaBalanceScale,
-// 	FaBible,
-// 	FaBasketballBall,
-// 	FaCar,
-// 	FaCloudSun,
-// 	FaConciergeBell,
-// 	FaDungeon,
-// 	FaFutbol,
-// 	FaHorseHead,
-// 	FaIceCream,
-// 	FaMenorah,
-// 	FaOtter,
-// 	FaPaw,
-// 	FaPepperHot,
-// 	FaSkiing,
-// 	FaSleigh,
-// 	FaTrophy,
-// 	FaVolleyballBall,
-// } from 'react-icons/fa';
 
 const App = () => {
 
@@ -61,14 +36,10 @@ const App = () => {
 		const card = document.querySelector('.card_' + id);
 		card.classList.toggle('is-flipped');
 
-		// card.addEventListener('click', function() {
-		// 	card.classList.toggle('is-flipped');
-		// });
 	};
 
 	return (
 		<div className="App">
-
 
 			<div className="wrapper">
 				<div className="cards_top">
@@ -76,24 +47,22 @@ const App = () => {
 						<Card key={ item.id } card={ item } top="10px" left={ (index*100) } onClick={ onCardClick } />
 					) )}
 				</div>
-				<div className="cards_middle">
-					<div className="cards_left">
-						{ cards_left.map( ( item, index, array ) => (
-							<Card key={ item.id } card={ item } top="10px" left={ (index*100) } onClick={ onCardClick } />
-						) )}
-					</div>
-					<div className="cards_map">
+				<div className="cards_left">
+					{ cards_left.map( ( item, index, array ) => (
+						<Card key={ item.id } card={ item } top="10px" left={ (index*100) } onClick={ onCardClick } />
+					) )}
+				</div>
+				<div className="cards_map">
 
-						<div className="track_container">
-							<Track  />
-						</div>
+					<div className="track_container">
+						<Track  />
+					</div>
 
-					</div>
-					<div className="cards_right">
-						{ cards_right.map( ( item, index, array ) => (
-							<Card key={ item.id } card={ item } top="10px" left={ (index*100) } onClick={ onCardClick } />
-						) )}
-					</div>
+				</div>
+				<div className="cards_right">
+					{ cards_right.map( ( item, index, array ) => (
+						<Card key={ item.id } card={ item } top="10px" left={ (index*100) } onClick={ onCardClick } />
+					) )}
 				</div>
 				<div className="cards_bottom">
 					{ cards_bottom.map( ( item, index, array ) => (

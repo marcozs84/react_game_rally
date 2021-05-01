@@ -13,7 +13,6 @@ const Card = ( { card:item, left, top, onClick } ) => {
 		<div className="card" >
 			<div className={`card_inner card_${ card.id } ${ flipped ? 'is-flipped' : ''} `} onClick={ () => onClick( card.id ) }>
 				<div className="card_face card_face_front">
-					{/*<h2>Front card { card.id }</h2>*/}
 					<div className="card_icon">
 						<Icon icon="FaLeaf" />
 					</div>
